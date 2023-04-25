@@ -10,7 +10,7 @@ import { useState } from 'react' ;
     event.preventDefault();
     var postData ={text};
     console.log(postData);
-    await axios.post('http://localhost:5000/',postData)
+    await axios.post('https://t0do-server.onrender.com/',postData)
     .then((res)=>{console.log(res)})
     .catch((err)=>{console.log(err)})
     setText("");
