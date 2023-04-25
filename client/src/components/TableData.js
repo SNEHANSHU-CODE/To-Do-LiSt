@@ -21,7 +21,7 @@ function TableData() {
   const handleDelete =async(id) =>{
       console.log(id);
       console.log("delete icon clicked");
-      await axios.delete('http://localhost:5000/',{data:{"elementId":id}})
+      await axios.delete('https://t0do-server.onrender.com/',{data:{"elementId":id}})
     .then((res)=>{console.log(res)})
     .catch((err)=>{console.log(err)})
   }
@@ -31,10 +31,10 @@ const handleEdit =async(id,tShow) =>{
       console.log(tShow);
     const editData = prompt("Edit Task","");
     if(editData===null){return;}
-    await axios.delete('http://localhost:5000/',{data:{"elementId":id}})
+    await axios.delete('https://t0do-server.onrender.com/',{data:{"elementId":id}})
     .then((res)=>{console.log(res)})
     .catch((err)=>{console.log(err)})
-    await axios.post('http://localhost:5000/',{"text":editData})
+    await axios.post('https://t0do-server.onrender.com/',{"text":editData})
     .then((res)=>{console.log(res)})
     .catch((err)=>{console.log(err)})
     
