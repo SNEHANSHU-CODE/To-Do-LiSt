@@ -8,7 +8,7 @@ function TableData() {
   useEffect(() => {
     const getAllData = async () => {
       try {
-        const temp = await axios.get("http://localhost:5000/");
+        const temp = await axios.get("https://t0do-server.onrender.com/");
         setShow(temp.data);
       } catch (error) {
         console.log("error in axios call", error);
